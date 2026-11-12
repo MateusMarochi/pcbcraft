@@ -4,6 +4,10 @@
 
 - Save board dimensional limits and routing preferences through Analyze → Rules and `pcb.set_rules`; routing, DRC and captured clearance queries share effective values and provenance. Authored rules use board format 19; boards without rules retain their previous encoding.
 
+Default and Power library sources are marked Built-in and cannot be removed or
+replaced through the Sources dialog or shared library commands. External library
+registrations remain removable without changing pinned project definitions.
+
 Tracks and vias can be locked together in Properties or through
 `pcb.set_copper_locked`. Locked copper stays selectable and refuses geometry,
 size and deletion changes, including indirect changes from footprint transforms
